@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box::before{
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 130%;
+  background: linear-gradient(#00ccff, #d500f9 );
+  animation: infinite linear rotate 4s;
+}
+
+.box::after{
+  content: '';
+  position: absolute;
+  background: #0e1538;
+  inset: 6px;
+  box-shadow: 0 0 1px 1px #4fad3b;
+  border-radius: 16px;
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
